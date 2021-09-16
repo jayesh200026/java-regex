@@ -17,13 +17,14 @@ public class UserRegistration {
 
 		final String PHONE = "[1-9][0-9]\\s[1-9][0-9]{9}";
 
-		final String PASSWORD = "([a-zA-Z0-9])*[A-Z]([a-zA-Z0-9])*{8}[a-zA-Z0-9]*"; // USECASE5-RULE2
+		//final String PASSWORD = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20}$"; 
+		final String PASSWORD = "(?=.*[A-Z])[a-zA-Z0-9!@?*]{8,}";// USECASE5-RULE2
 
 		String firstName = "Jayesh";
 		String lastName = "Kumar";
 		String email = "jayeshkumar8660@gmail.com";
 		String phone = "91 8660886760";
-		String password = "DaredeviL";
+		String password = "dAredevil";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { // USECASE1
 			System.out.println("Valid first name");
