@@ -14,13 +14,16 @@ public class UserRegistration {
 		final String domain = "\\@[a-z]{3}[a-z]*\\.[a-z]{2}[a-z]*([.][a-z]{2}[a-z]*)?";
 
 		final String EMAIL = username + domain;
-		
-		final String PHONE="[1-9][0-9]\\s[1-9][0-9]{9}";
+
+		final String PHONE = "[1-9][0-9]\\s[1-9][0-9]{9}";
+
+		final String PASSWORD = "[0-9A-Za-z]{8}[0-9A-Za-z]*"; // USECASE5-RULE1
 
 		String firstName = "Jayesh";
 		String lastName = "Kumar";
 		String email = "jayeshkumar8660@gmail.com";
-		String phone="91 8660886760";
+		String phone = "91 8660886760";
+		String password = "daredevil";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { // USECASE1
 			System.out.println("Valid first name");
@@ -39,11 +42,15 @@ public class UserRegistration {
 		} else {
 			System.out.println("Invalid email");
 		}
-		if(Pattern.matches(PHONE, phone)) {
+		if (Pattern.matches(PHONE, phone)) { // USECASE4
 			System.out.println("Valid phone number");
-		}
-		else {
+		} else {
 			System.out.println("Invalid phone number");
+		}
+		if (Pattern.matches(PASSWORD, password)) {// USECASE5
+			System.out.println("Valid password");
+		} else {
+			System.out.println("Invalid password");
 		}
 
 	}
