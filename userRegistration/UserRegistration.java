@@ -23,6 +23,7 @@ public class UserRegistration {
 		String lastName = "Kumar";
 		String email = "jayeshkumar8660@gmail.com";
 		String phone = "91 8660886760";
+
 		String password = "dAredEvil123";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { // USECASE1
