@@ -17,13 +17,13 @@ public class UserRegistration {
 
 		final String PHONE = "[1-9][0-9]\\s[1-9][0-9]{9}";
 
-		final String PASSWORD = "[0-9A-Za-z]{8}[0-9A-Za-z]*"; // USECASE5-RULE1
+		final String PASSWORD = "[([a-zA-Z0-9])*[A-Z]([a-zA-Z0-9])*]{8}[a-zA-Z0-9]*"; // USECASE5-RULE2
 
 		String firstName = "Jayesh";
 		String lastName = "Kumar";
 		String email = "jayeshkumar8660@gmail.com";
 		String phone = "91 8660886760";
-		String password = "daredevil";
+		String password = "dAredEvil";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { // USECASE1
 			System.out.println("Valid first name");
@@ -47,7 +47,7 @@ public class UserRegistration {
 		} else {
 			System.out.println("Invalid phone number");
 		}
-		if (Pattern.matches(PASSWORD, password)) {// USECASE5
+		if (Pattern.matches(PASSWORD, password)) {// USECASE6
 			System.out.println("Valid password");
 		} else {
 			System.out.println("Invalid password");
