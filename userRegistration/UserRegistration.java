@@ -11,18 +11,19 @@ public class UserRegistration {
 		final String LAST_NAME = "^[A-Z][a-z]{2}[a-z]*";
 
 		final String username = "^[A-Za-z][A-Za-z0-9+-]{2}[A-Za-z0-9+-]*([.][A-Za-z0-9]{2}[A-Za-z0-9]*)?";
-		final String domain = "\\@[a-z]{3}[a-z]*\\.[a-z]{2}[a-z]*([.][a-z]{2}[a-z]*)?";
+		final String domain = "\\@[a-zA-Z0-9]+\\.[a-z]{2}[a-z]*([.][a-z]{2}[a-z]*)?";
 
 		final String EMAIL = username + domain; // USECASE9 Fits well with this pattern.
 
 		final String PHONE = "[1-9][0-9]\\s[1-9][0-9]{9}";
 
-		final String PASSWORD = "(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}";// USECASE5-RULE2
+		final String PASSWORD = "(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}";// USECASE5-RULE2 kept maximum character in password to be 20.
 
 		String firstName = "Jayesh";
 		String lastName = "Kumar";
-		String email = "jayeshkumar8660@gmail.com";
+		String email = "abc-100@1.com";
 		String phone = "91 8660886760";
+
 		String password = "dAredevil123";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { // USECASE1
